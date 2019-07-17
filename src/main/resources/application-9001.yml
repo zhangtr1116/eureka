@@ -1,0 +1,13 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    register-with-eureka: true #是否注册到eureka上 
+    fetch-registry: true #获取注册表（eureka集群时候用到）
+    service-url:
+      defaultZone: http://eureka2:9002/eureka,http://eureka3:9003/eureka #配置eureka的server的注册地址
+  instance:
+    hostname: eureka1
